@@ -1,5 +1,11 @@
 {
     "require": {
-        "league/plates": "^3.4"
+        "league/plates": "^3.4",
+        "kanata-php/socket-conveyor": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "MyApp\\": "src"
+        }
     }
 }
