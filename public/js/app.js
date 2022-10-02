@@ -34,7 +34,8 @@ var WsRouter = /*#__PURE__*/function () {
       protocol: config.protocol ? config.protocol : 'ws',
       uri: config.uri ? config.uri : '127.0.0.1',
       port: config.port ? config.port : 8000,
-      channel: config.channel ? config.channel : null
+      channel: config.channel ? config.channel : null,
+      listen: config.listen ? config.listen : null
     }; // events
 
     if (this.appHandlers.onOpen) options.onOpen = this.appHandlers.onOpen;
@@ -189,7 +190,7 @@ class Conveyor {
     listen(action) {
         this.rawSend(JSON.stringify({
             'action': 'add-listener',
-            'listener': action,
+            'listen': action,
         }));
     }
 }
@@ -303,14 +304,15 @@ var app = {
       'new-connection-action': app.handleNewConnection,
       'closed-connection-action': app.handleClosedConnection,
       'broadcast-action': app.handleBroadcast,
-      'secondary-broadcast-action': app.handleBroadcast
+      'secondary-broadcast-action': app.handleBroadcast,
+      'fanout-action': app.handleBroadcast
     });
     app.listenEvents();
   },
   listenEvents: function listenEvents() {
     app.messageForm.addEventListener("submit", function (e) {
       e.preventDefault();
-      app.router.ws.send(app.messageBox.value, 'secondary-broadcast-action');
+      app.router.ws.send(app.messageBox.value, 'fanout-action');
     }, false);
   },
   // ----------------------------------------------------------

@@ -15,6 +15,7 @@ class WsRouter
             uri: config.uri ? config.uri : '127.0.0.1',
             port: config.port ? config.port : 8000,
             channel: config.channel ? config.channel : null,
+            listen: config.listen ? config.listen : null,
         };
         // events
         if (this.appHandlers.onOpen) options.onOpen = this.appHandlers.onOpen;

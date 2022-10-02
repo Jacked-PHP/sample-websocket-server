@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "kanata-php/socket-conveyor",
-            "version": "1.1.6",
+            "version": "1.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kanata-php/socket-conveyor.git",
-                "reference": "3918db1a49f8531c93c5491a387ffa9f9c78f300"
+                "reference": "1eb785d5ab74ba59a2d2dc0c1e21f7dd7e90baf1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kanata-php/socket-conveyor/zipball/3918db1a49f8531c93c5491a387ffa9f9c78f300",
-                "reference": "3918db1a49f8531c93c5491a387ffa9f9c78f300",
+                "url": "https://api.github.com/repos/kanata-php/socket-conveyor/zipball/1eb785d5ab74ba59a2d2dc0c1e21f7dd7e90baf1",
+                "reference": "1eb785d5ab74ba59a2d2dc0c1e21f7dd7e90baf1",
                 "shasum": ""
             },
             "require": {
@@ -47,7 +47,7 @@
             "description": "A WebSocket/Socket message Router",
             "support": {
                 "issues": "https://github.com/kanata-php/socket-conveyor/issues",
-                "source": "https://github.com/kanata-php/socket-conveyor/tree/1.1.6"
+                "source": "https://github.com/kanata-php/socket-conveyor/tree/1.1.8"
             },
             "funding": [
                 {
@@ -55,7 +55,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-08-28T04:39:40+00:00"
+            "time": "2022-10-02T21:45:48+00:00"
         },
         {
             "name": "league/pipeline",

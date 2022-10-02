@@ -43,6 +43,7 @@ var app = {
                 'closed-connection-action': app.handleClosedConnection,
                 'broadcast-action': app.handleBroadcast,
                 'secondary-broadcast-action': app.handleBroadcast,
+                'fanout-action': app.handleBroadcast,
             }
         );
 
@@ -52,7 +53,7 @@ var app = {
     listenEvents: () => {
         app.messageForm.addEventListener("submit", (e) => {
             e.preventDefault();
-            app.router.ws.send(app.messageBox.value, 'secondary-broadcast-action');
+            app.router.ws.send(app.messageBox.value, 'fanout-action');
         }, false);
     },
 
